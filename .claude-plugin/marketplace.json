@@ -1,18 +1,33 @@
 {
   "name": "frontend-design-skills",
-  "description": "Design system and UI skills for Claude Code. Includes 60+ DESIGN.md reference patterns, automatic project analysis, and cinematic scroll animation capabilities.",
+  "description": "Design system and UI skills for Claude Code. 60+ DESIGN.md reference patterns, auto project analysis, data visualization, and cinematic scroll animation.",
   "skills": [
     {
       "name": "design-systems",
       "plugin": "design-systems",
-      "description": "Automatically detect project type and apply optimal design system from 60+ reference patterns"
+      "description": "Auto-detect project type and apply optimal design system from 60+ reference patterns"
     },
     {
       "name": "epic-design",
       "plugin": "epic-design",
-      "description": "Build immersive, cinematic 2.5D interactive websites using scroll storytelling and parallax depth"
+      "description": "Build cinematic 2.5D scroll-driven websites with parallax depth and motion"
+    },
+    {
+      "name": "opendata-api",
+      "plugin": "opendata",
+      "description": "Query public datasets via REST API with SQL support"
+    },
+    {
+      "name": "openchart",
+      "plugin": "openchart",
+      "description": "Generate charts and visualizations from structured data"
+    },
+    {
+      "name": "svg-design",
+      "plugin": "opendesign",
+      "description": "Create optimized SVG icons, logos, and illustrations"
     }
   ],
-  "repository": "https://github.com/yourusername/frontend-design-md",
+  "repository": "https://github.com/cozy/frontend-design-md",
   "license": "MIT"
 }
