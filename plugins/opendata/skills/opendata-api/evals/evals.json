@@ -1,0 +1,47 @@
+{
+  "evals": [
+    {
+      "name": "basic_query",
+      "prompt": "Get the first 5 rows from the FRED CPI dataset",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "filter",
+          "value": "limit=5"
+        },
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "fred/cpi"
+        }
+      ]
+    },
+    {
+      "name": "filter_syntax",
+      "prompt": "Query GDP data for years >= 2020 from OWID dataset",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "filter[year][gte]=2020"
+        }
+      ]
+    },
+    {
+      "name": "sql_query",
+      "prompt": "Run a SQL query to calculate average CPI by year",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "SELECT"
+        },
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "params"
+        }
+      ]
+    }
+  ]
+}

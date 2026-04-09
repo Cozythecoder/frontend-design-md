@@ -1,0 +1,52 @@
+{
+  "evals": [
+    {
+      "name": "line_chart",
+      "prompt": "Create a line chart showing monthly sales data",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "mark"
+        },
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "line"
+        }
+      ]
+    },
+    {
+      "name": "bar_chart_ranking",
+      "prompt": "Show top 10 countries by GDP as a horizontal bar chart",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "encoding"
+        },
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "sort"
+        }
+      ]
+    },
+    {
+      "name": "chart_with_chrome",
+      "prompt": "Create a chart with title and source attribution",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "chrome"
+        },
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "title"
+        }
+      ]
+    }
+  ]
+}

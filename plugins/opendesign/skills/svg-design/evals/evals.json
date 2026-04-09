@@ -1,0 +1,47 @@
+{
+  "evals": [
+    {
+      "name": "basic_svg",
+      "prompt": "Create a 24x24 checkmark icon",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "viewBox"
+        },
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "xmlns"
+        }
+      ]
+    },
+    {
+      "name": "logo_design",
+      "prompt": "Design a logo for a tech startup",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "AskUserQuestion"
+        },
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "mood"
+        }
+      ]
+    },
+    {
+      "name": "currentColor",
+      "prompt": "Create an icon that adapts to theme colors",
+      "assertions": [
+        {
+          "type": "includes",
+          "target": "output",
+          "value": "currentColor"
+        }
+      ]
+    }
+  ]
+}
