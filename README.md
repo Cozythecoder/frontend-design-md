@@ -39,31 +39,58 @@ From [tryopendata/skills](https://github.com/tryopendata/skills):
 - **openchart**: Generate charts, tables, graphs from data
 - **svg-design**: Create hand-written SVG logos and icons
 
-## Usage
+## Installation
 
-### As Claude Code Plugin
+### As Claude Code Skill
 
 ```bash
-# Add to Claude Code marketplace
-/plugin marketplace add yourusername/frontend-design-md
-
-# Install specific skills
-/plugin install design-systems
-/plugin install epic-design
-/plugin install opendata-api
+# Clone to skills directory
+git clone https://github.com/cozy/frontend-design-md ~/.claude/skills/frontend-design-md
 ```
 
-### Direct Usage
+Or symlink for development:
+```bash
+ln -s /path/to/frontend-design-md ~/.claude/skills/frontend-design-md
+```
+
+Restart Claude Code, then run `/plugin` to verify.
+
+## Usage
+
+### Commands
+
+| Command | Description |
+|---------|-------------|
+| `/design analyze` | Analyze project and recommend design system |
+| `/design apply <system>` | Apply design system (linear, vercel, apple, etc.) |
+| `/design systems` | List all 60+ available design systems |
+| `/epic scroll` | Initialize cinematic 2.5D parallax website |
+| `/chart from <data>` | Generate chart from CSV/JSON data |
+| `/data query <source>` | Query public datasets (FRED, etc.) |
+| `/svg icon <name>` | Create optimized SVG icon |
+| `/svg logo <desc>` | Generate geometric SVG logo |
+
+### Natural Language
+
+Just say what you want:
+- "Apply Linear design to my project"
+- "Build epic scroll site with parallax"
+- "Create chart from this data"
+- "Get CPI data from FRED"
+- "Make a search icon SVG"
+- "Design a geometric logo"
+
+### Direct Script Usage
 
 ```bash
-# Copy a design system
-cp -r design-systems/linear.app ./my-project/design/
-
 # Run project analysis
 python3 skills/design-systems/scripts/analyze-project.py ./my-project
 
 # Validate application
 python3 skills/design-systems/scripts/validate-application.py ./my-project linear.app
+
+# Copy a design system reference
+cp -r design-systems/vercel ./my-project/design/
 ```
 
 ## Repository Structure

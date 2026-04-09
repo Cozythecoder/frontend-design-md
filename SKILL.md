@@ -2,36 +2,35 @@
 name: frontend-design-md
 description: Design system intelligence, cinematic scroll animations, data visualization, and SVG creation - all in one unified skill.
 trigger: [design, system, ui, chart, data, svg, icon, logo, parallax, scroll, animation, color, typography]
+allowed-tools: [Read, Bash(python3:skills/*/scripts/*), Bash(curl), Glob, Grep, WebFetch]
 ---
 
 # Frontend Design MD
 
 A unified design skill combining 60+ design system references, cinematic animations, data visualization, and SVG creation.
 
-## Commands
+## Available Commands
 
-When user mentions any of these, route to appropriate handler:
+| Command | Description |
+|---------|-------------|
+| `/design analyze` | Analyze project and recommend design system |
+| `/design apply <system>` | Apply specified design system (linear, vercel, etc.) |
+| `/epic scroll` | Initialize cinematic 2.5D parallax site |
+| `/chart from <data>` | Generate chart from data source |
+| `/data query <source>` | Query public datasets (FRED, etc.) |
+| `/svg icon <name>` | Create optimized SVG icon |
+| `/svg logo <desc>` | Generate geometric SVG logo |
+| `/design systems` | List available 60+ design systems |
 
-### `/design analyze` or "analyze my project design"
-→ Run category detection + token extraction + recommend optimal design system
+## Natural Language Triggers
 
-### `/design apply <system>` or "apply linear design"
-→ Apply specified design system to current project with validation
-
-### `/epic scroll` or "build parallax site"
-→ Initialize cinematic 2.5D scroll project with depth system
-
-### `/chart from <data>` or "create a chart"
-→ Generate chart specification from data source
-
-### `/data query <dataset>` or "get fred cpi data"
-→ Query OpenData API and return formatted results
-
-### `/svg icon <name>` or "create a search icon"
-→ Generate optimized SVG icon following design system
-
-### `/svg logo <description>` or "design a logo"
-→ Create hand-written SVG logo with geometric construction
+Also activates on phrases like:
+- "Apply Linear design system"
+- "Build epic scroll site"
+- "Create chart from this data"
+- "Get CPI data from FRED"
+- "Make a search icon SVG"
+- "Design a geometric logo"
 
 ## Auto-Detection
 
@@ -40,14 +39,3 @@ When opening any project, automatically:
 2. Extract existing color/font tokens
 3. Recommend best-matching design system
 4. Offer to apply with `/design apply <system>`
-
-## Quick Start
-
-| What you want | What to say |
-|--------------|-------------|
-| Make my site look like Linear | "Apply linear design system" |
-| Add scroll parallax | "Build epic scroll site" |
-| Show data as chart | "Create chart from this data" |
-| Query economic data | "Get CPI data from FRED" |
-| Need an icon | "Create search icon svg" |
-| Design a logo | "Create geometric logo" |
